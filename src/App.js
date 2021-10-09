@@ -2,6 +2,8 @@ import logo from './logo.svg';
 import './App.css';
 import UserList from './containers/student-detail'
 import UserDetails from './containers/student-list';
+import Add from './components/add';
+import Added from './components/added';
 import { useSelector } from 'react-redux';
 import { selectUser } from './actions';
 
@@ -16,6 +18,7 @@ function App() {
        <div className="row">
        <UserDetails/>
       
+       {user? <Added/> : <Add/> }
        </div>
      
      </div>
